@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import pyplus.streamlit as stp
+from displayer import Displayer
 
 st.set_page_config(layout="wide")
 
@@ -21,9 +22,6 @@ hide_streamlit_style='''
 height_max=200
 
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-class Displayer:
-    pass
 
 with st.container(height=height_max):
     function_list = [func for func in dir(Displayer) if not func.startswith('_')]
