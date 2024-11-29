@@ -19,11 +19,11 @@ hide_streamlit_style='''
             </style>
         '''
 
-height_max=200
+st.session_state['height_max']=200
 
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-with st.container(height=height_max):
+with st.container(height=st.session_state.height_max):
     function_list = [func for func in dir(Displayer) if not func.startswith('_')]
     tp = stp.TabsPlus(titles=function_list,layout='column')
     for key in function_list:
