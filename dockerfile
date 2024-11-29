@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt ./
 COPY pyplus ./pyplus
 COPY main.py ./
+COPY displayer.py ./
 
 RUN pip install -r requirements.txt
 
