@@ -2,3 +2,4 @@
 .vscode
 .streamlit
 *.pyc
+__pycache__
